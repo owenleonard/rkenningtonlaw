@@ -1,0 +1,13 @@
+*.pyc
+*.sqlite3
+settings_local.py
+.project
+.pydevproject
+ENV/*
+*.sublime-workspace
+*.sublime-project
+node_modules
+.sass-cache
+static/dist
+manage.py
+myproject/

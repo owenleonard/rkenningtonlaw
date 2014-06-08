@@ -1,0 +1,13 @@
+{% extends "kenningtonlaw/base.html" %}
+
+{% block content %}
+<div class="article contact-form">
+	<p>
+		We are here to meet your needs.
+	</p>
+	<form action="/contact" method="post">{% csrf_token %}
+	{{ form.as_p }}
+	<input class="submit-button" type="submit" value="Submit" />
+	</form>
+</div>
+{% endblock %}

@@ -1,0 +1,11 @@
+{% extends "kenningtonlaw/base.html" %}
+
+{% block content %}
+<div class="article">
+	{% for area in areas %}
+	<h1>{{ area.title }}</h1>
+	<p>{{ area.description }}</p>
+	{% endfor %}
+</div>
+{% endblock %}
+
