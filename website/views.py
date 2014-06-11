@@ -3,21 +3,19 @@ from django.http import HttpResponseRedirect
 
 from website.models import PracticeArea, Disclaimer, ContactRecipient, ContactForm
 
-disclaimer = Disclaimer.objects.filter(name="global").first()
-
 # Create your views here.
 def index(request):
-	return render_to_response('kenningtonlaw/index.html', {'disclaimer': disclaimer})
+	return render_to_response('kenningtonlaw/index.html', {'disclaimer': Disclaimer.objects.filter(name="global").first()})
 
 def areas(request):
 	areas = PracticeArea.objects.filter(display=True)
-	return render_to_response('kenningtonlaw/areas.html', {'disclaimer': disclaimer, 'areas': areas})
+	return render_to_response('kenningtonlaw/areas.html', {'disclaimer': Disclaimer.objects.filter(name="global").first(), 'areas': areas})
 
 def profile(request):
-	return render_to_response('kenningtonlaw/profile.html', {'disclaimer': disclaimer})
+	return render_to_response('kenningtonlaw/profile.html', {'disclaimer': Disclaimer.objects.filter(name="global").first()})
 
 def directions(request):
-	return render_to_response('kenningtonlaw/directions.html', {'disclaimer': disclaimer})
+	return render_to_response('kenningtonlaw/directions.html', {'disclaimer': Disclaimer.objects.filter(name="global").first()})
 
 def contact(request):
 	if request.method == 'POST':
@@ -37,7 +35,7 @@ def contact(request):
 	else:
 		form = ContactForm()
 
-	return render(request, 'kenningtonlaw/contact.html', {'disclaimer': disclaimer, 'form': form})
+	return render(request, 'kenningtonlaw/contact.html', {'disclaimer': Disclaimer.objects.filter(name="global").first(), 'form': form})
 
 def thanks(request):
-	return render_to_response('kenningtonlaw/thanks.html', {'disclaimer': disclaimer})
+	return render_to_response('kenningtonlaw/thanks.html', {'disclaimer': Disclaimer.objects.filter(name="global").first()})
