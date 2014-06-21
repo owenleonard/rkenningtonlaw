@@ -4,7 +4,7 @@
 <div class="article">
 	{% for area in areas %}
 	<h1>{{ area.title }}</h1>
-	<p>{{ area.description }}</p>
+	<p>{{ area.description|linebreaks }}</p>
 	{% endfor %}
 </div>
 {% endblock %}
