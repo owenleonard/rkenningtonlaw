@@ -8,7 +8,7 @@
 
 html {
 	min-height: 100%;
-	background-color: #bcac84;
+	background-color: #8d8163;
 	font-family: 'Libre Baskerville', serif;
 }
 
@@ -104,8 +104,8 @@ a[name] {
 	text-align: center;
 	color: #000;
 	height: 32px;
-	border-top: 1px solid gray;
-	border-bottom: 1px solid gray;
+	border-top: 1px solid black;
+	border-bottom: 1px solid black;
 }
 
 .menu li a:hover {
