@@ -148,4 +148,6 @@ a[name] {
 .article-title {
 	font-size: 24px;
 	font-weight: bold;
+	display: block;
+	margin: 14px 0;
 }
