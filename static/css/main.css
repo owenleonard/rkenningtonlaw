@@ -144,3 +144,8 @@ a[name] {
 	float: right;
 	font-size: 16px;
 }
+
+.article-title {
+	font-size: 24px;
+	font-weight: bold;
+}
