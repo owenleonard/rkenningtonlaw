@@ -80,7 +80,7 @@ a[name] {
 
 .footer {
 	clear: both;
-	border-top: 1px solid #888;
+	border-top: 1px solid black;
 	text-align: center;
 	font-size: 10px;
 }
