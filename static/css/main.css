@@ -1,3 +1,11 @@
+*,
+*:before,
+*:after {
+  -moz-box-sizing: border-box;
+  -webkit-box-sizing: border-box;
+  box-sizing: border-box;
+ }
+
 html {
 	min-height: 100%;
 	background-color: #eee;
@@ -7,7 +15,6 @@ html {
 body {
 	margin: 0;
 	padding: 0;
-	box-sizing: border-box;
 }
 
 a:link {
@@ -52,18 +59,18 @@ a[name] {
 }
 
 .section {
-	width: 770px;
+	width: 790px;
 	float: left;
 	background-color: #fff;
 	margin: 5px 0 10px;
-	padding: 5px 10px;
+	padding: 15px 10px;
 	font-size: 14px;
 	box-shadow: 2px 2px 5px gray;
 }
 
 .aside {
 	box-shadow: 2px 2px 5px gray;
-	width: 185px;
+	width: 195px;
 	float: right;
 	text-align: center;
 	background-color: #fff;
@@ -96,7 +103,7 @@ a[name] {
 	padding-top: 5px;
 	text-align: center;
 	color: #000;
-	height: 25px;
+	height: 32px;
 	border-top: 1px solid gray;
 	border-bottom: 1px solid gray;
 }
@@ -145,9 +152,15 @@ a[name] {
 	font-size: 16px;
 }
 
+.article > p:first-of-type{
+	margin-top: 0;
+}
+
+.article > p:last-of-type{
+	margin-bottom: 0;
+}
+
 .article-title {
 	font-size: 24px;
 	font-weight: bold;
-	display: block;
-	margin: 14px 0;
 }
