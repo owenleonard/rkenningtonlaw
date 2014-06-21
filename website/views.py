@@ -1,7 +1,7 @@
 from django.shortcuts import render_to_response, render
 from django.http import HttpResponseRedirect
 
-from website.models import PracticeArea, Disclaimer, ContactRecipient, ContactForm
+from website.models import PracticeArea, Disclaimer, ContactRecipient, ContactForm, Content
 
 def globalDisclaimer():
 	'''retrieves the global disclaimer to be placed at the bottom of the page'''
@@ -9,14 +9,16 @@ def globalDisclaimer():
 
 # Create your views here.
 def index(request):
-	return render_to_response('kenningtonlaw/index.html', {'disclaimer': globalDisclaimer()})
+	content = Content.objects.filter(title="home").first()
+	return render_to_response('kenningtonlaw/index.html', {'disclaimer': globalDisclaimer(), 'content': content})
 
 def areas(request):
 	areas = PracticeArea.objects.filter(display=True)
 	return render_to_response('kenningtonlaw/areas.html', {'disclaimer': globalDisclaimer(), 'areas': areas})
 
 def profile(request):
-	return render_to_response('kenningtonlaw/profile.html', {'disclaimer': globalDisclaimer()})
+	content = Content.objects.filter(title="profile").first()
+	return render_to_response('kenningtonlaw/profile.html', {'disclaimer': globalDisclaimer(), 'content': content})
 
 def directions(request):
 	return render_to_response('kenningtonlaw/directions.html', {'disclaimer': globalDisclaimer()})
