@@ -4,6 +4,8 @@
 <div class="article">
 	<img class="profile-pic" src="/static/images/RobertChair.png" alt="Picture of office window">
 	<span class="article-title">Now specializing in immigration law</span>
+	{% autoescape off %}
 	{{ content.description|linebreaks }}
+	{% endautoescape %}
 </div>
 {% endblock %}
